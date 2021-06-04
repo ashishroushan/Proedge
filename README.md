@@ -1,7 +1,10 @@
 # Proedge
 
 The app was made with the help of react JS acting as the frontend supporting all the UI components and the API calls to the server were handled with the help of node JS which made further calls to an external API provided by the company which returned the result and it was displayed on the frontend of the application.
-The back-end of the Project is made by nodeJS and deployed on [HEROKU](https://roll-number-proedge.herokuapp.com/) and the front-end was deployed on [NETLIFY](https://proedge-roll-number.netlify.app/).
+The app was deployed on [NETLIFY](https://proedge-roll-number.netlify.app/).
+
+![chrome_2021-06-05_02-26-43](https://user-images.githubusercontent.com/75972049/120867518-bade1f80-c5af-11eb-9eb1-46a5a2b6d8c3.png)
+
 
 ## FRONTEND [REACT JS]
 ### TECH USED:
@@ -10,7 +13,7 @@ The back-end of the Project is made by nodeJS and deployed on [HEROKU](https://r
 3.Material UI
 
 ## COMPONENTS:
-### 1.INPUTROLL [FORM ELEMENT TO INPUT ROLL NUMBERS]
+### 1.RollInputs [FORM ELEMENT TO INPUT ROLL NUMBERS]
 
 ![chrome_2021-06-05_02-31-08](https://user-images.githubusercontent.com/75972049/120866665-10193180-c5ae-11eb-8ad1-d21d3175d383.png)
 
@@ -23,7 +26,7 @@ The form input element inputs the data with the help of controlled components.Th
 
 The result component handles the array of roll numbers passed down as props to it by the InputRoll component. It sends the array to the local server created with node js in the form a JS object with "rollNumber" key and the array of roll numbers as the value, with the help of an axios post request. The response to the axios post request is handles by storing it as an array of Pass/Fail string array in a useState variable called resData. The resData array is then converted to a JSX table using the array map function and correlating every result to its corresponding roll number and displaying it as a table.
 
-### 3.LOADER [CSS ANIMATION WHILE FETCHING DATA]
+### 3.Loader [CSS ANIMATION WHILE FETCHING DATA]
 
 ![chrome_2021-06-05_02-28-31](https://user-images.githubusercontent.com/75972049/120866807-4951a180-c5ae-11eb-878c-c31c0e790001.png)
 
