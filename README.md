@@ -18,13 +18,13 @@ The app was deployed on [NETLIFY](https://proedge-roll-number.netlify.app/).
 ![chrome_2021-06-05_02-31-08](https://user-images.githubusercontent.com/75972049/120866665-10193180-c5ae-11eb-8ad1-d21d3175d383.png)
 
 
-The form input element inputs the data with the help of controlled components.The form takes input in the form of commma separated roll numbers which is split with the help of string split function and stored in an array state. The array is passed down as a prop to the result component which handles it. The submit button renders the result component only on inputting something in the input box using conditional rendering.
+The form input element inputs the data with the help of controlled components.The form takes input in the form of commma separated roll numbers which is split with the help of string split function and stored in an array state. The array is passed down as a prop to the result component which handles it. The submit button renders the result component only on inputting something in the input box using conditional rendering. The Input component is made by using MATERIAL UI. A nice smooth scroll down animation is added when button is clicked to show the results in front of user which makes user experience better. And when user gives invalid input it will removed and a small message will be rendered.
 
-### 2.RESULT [DISPLAY THE OUTPUT IN A TABULAR FASHION]
+### 2.Result [DISPLAY THE OUTPUT IN A TABULAR FASHION]
 
 ![chrome_2021-06-05_02-30-30](https://user-images.githubusercontent.com/75972049/120866708-1dceb700-c5ae-11eb-830e-e834b2d096b9.png)
 
-The result component handles the array of roll numbers passed down as props to it by the InputRoll component. It sends the array to the local server created with node js in the form a JS object with "rollNumber" key and the array of roll numbers as the value, with the help of an axios post request. The response to the axios post request is handles by storing it as an array of Pass/Fail string array in a useState variable called resData. The resData array is then converted to a JSX table using the array map function and correlating every result to its corresponding roll number and displaying it as a table.
+The result component handles the array of roll numbers passed down as props to it by the RollInputs component. It sends the array to the local server created with node js in the form a JS object with "rollNumber" key and the Math.random().toString() is used to give value to the key, with the help of an axios post request. The response to the axios post request is handles by storing it as an array of Pass/Fail string array in a useState variable called resData. The resData array is then converted to a JSX table using the array map function and correlating every result to its corresponding roll number and displaying it as a table.
 
 ### 3.Loader [CSS ANIMATION WHILE FETCHING DATA]
 
